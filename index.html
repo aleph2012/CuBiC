@@ -4,73 +4,9 @@
   <title>CuBiC - 3D Space Battle Map (16x16x16)</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
-  <script type="importmap">
-    {
-      "imports": {
-        "three": "https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.module.js",
-        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/",
-        "three/examples/jsm/controls/OrbitControls": "https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/controls/OrbitControls.js",
-        "three/examples/jsm/webxr/VRButton": "https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/webxr/VRButton.js",
-        "three/examples/jsm/webxr/XRControllerModelFactory": "https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/webxr/XRControllerModelFactory.js"
-      }
-    }
-  </script>
-
-  <script type="module" src="./main.js" defer></script>
-  <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-  <div id="menu">
-    <h1>CuBiC</h1>
-    <h2>3D Space Battle Map (16x16x16)</h2>
-
-    <button id="pcButton">PC Mode</button>
-    <button id="mobileButton">Mobile Mode</button>
-    <button id="vrButton">VR Mode</button>
-
-    <div id="version">v4.0</div>
-    <div id="autoRotateDiv">
-      <input type="checkbox" id="autoRotate" />
-      <label for="autoRotate">Start with Auto-Rotation</label>
-    </div>
-    <a href="https://transcension.mintlify.app/cubic/welcome" target="_blank">Docs</a>
-  </div>
-
-  <div id="pcHud">
-    <h3>Spaceships</h3>
-    <div class="row">
-      <label>Spawn color:</label>
-      <select id="spawnColor"></select>
-      <button id="addShipBtn">Add Ship</button>
-    </div>
-
-    <div class="row">
-      <label>Selected ship:</label>
-      <select id="shipList"></select>
-      <button id="centerBtn" title="Center camera on ship">Center</button>
-      <button id="followBtn" title="Toggle follow">Follow: Off</button>
-    </div>
-
-    <div class="row">
-      <div class="pill"><span class="chip" id="selChip"></span><span id="selMeta" class="muted">No ship selected</span></div>
-    </div>
-
-    <div class="row">
-      <button id="flyBtn">Fly 1 hop</button>
-      <button id="removeShipBtn">Remove Ship</button>
-      <button id="clearTrailsBtn">Clear Trails</button>
-    </div>
-
-    <div class="row">
-      <span class="muted">Click current node, then a valid adjacent node, then Fly. Click current node again to cancel.</span>
-    </div>
-  </div>
-
-  <button id="autoPlayBtnFloating">Auto Play: Off</button>
-
-  <button id="returnButton">Return to Menu</button>
-  <div id="error"></div>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

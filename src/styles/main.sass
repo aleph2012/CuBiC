@@ -1,0 +1,22 @@
+@use "fonts"
+@use "colors"
+@use "buttons"
+
+body
+  margin: 0
+  background: var(--backgroundColor)
+  color: var(--textColor)
+  overflow: hidden
+
+a
+  color: var(--accentColor)
+
+#error
+  position: fixed
+  bottom: 1.25rem
+  left: 1.25rem
+  background: var(--errorColor)
+  padding: 0.625rem 0.75rem
+  border-radius: 0.375rem
+  display: none
+  z-index: 200

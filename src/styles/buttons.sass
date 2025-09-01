@@ -1,0 +1,53 @@
+@use "colors"
+
+button
+  display: flex
+  justify-content: center
+  align-items: center
+  gap: 0.5rem
+  padding: 0.5rem 1rem
+  font-size: 1rem
+  margin: 0.25rem 0
+  cursor: pointer
+  background: var(--accentColor)
+  color: var(--textColor)
+  border: none
+  border-radius: 0.75rem
+  transition: background .2s
+
+  svg
+    width: 1.5rem
+    height: 1.5rem
+
+  &:has(svg)
+    padding: 0.5rem 0.75rem
+
+  &:hover
+    background: var(--accentDarkColor)
+
+  &:disabled
+    opacity: .4
+    cursor: not-allowed
+    background: var(--innerBackgroundColor)
+    border: 0.1rem solid var(--borderColor)
+
+// VR Not supported error
+#VRButton
+  opacity: 1 !important
+  background: var(--innerBackgroundColor) !important
+  border: 0.1rem solid var(--borderColor) !important
+  color: var(--textColor) !important
+  border-radius: 0.75rem !important
+  padding: 0.5rem 1rem !important
+  width: fit-content !important
+  backdrop-filter: blur(0.5rem)
+  text-transform: lowercase
+  left: 50% !important
+  transform: translateX(-50%) !important
+
+// Floating autoplay button in opposite corner
+#autoPlayBtnFloating
+  position: fixed
+  top: 1rem
+  right: 1rem
+  z-index: 151
